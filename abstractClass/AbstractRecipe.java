@@ -1,6 +1,6 @@
 package abstractClass;
 
-public abstract class AbstractRecipe {
+abstract public class AbstractRecipe {
     public void excute () {
         getReady();
         doTheDish();
