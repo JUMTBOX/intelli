@@ -16,13 +16,13 @@ public class Runner {
     ArrayList<String> mutableList = new ArrayList<>(list);
     mutableList.add("fig");
     mutableList.add("grape");
+    System.out.println("get메서드  >>>>>>  "+ mutableList.get(2));
+    mutableList.remove(2);
+    mutableList.forEach(System.out::println);
 
     LinkedList<String> mutableLinkedList = new LinkedList<>(list);
     mutableLinkedList.add("apple2");
     Vector<String> mutableVector = new Vector<>(list);
     mutableVector.add("kiwi");
-
-    mutableList.forEach(System.out::println); // Output: apple banana cherry date fig grape);
-
   }
 }
