@@ -14,7 +14,7 @@ public class ListInterface {
     arrayList.add(2, "date");
 
     /* addAll 메서드 , arg1 - 요소들을 삽입할 인덱스, arg2 - 삽입할 요소들의 collection */
-    List<String> newlist = List.of("yak", "zebra");
+    List<String> newlist = List.of("yok", "zebra");
     arrayList.addAll(2, newlist);
 
     /* set 메서드 - 특정 인덱스의 요소만을 변경 */
@@ -26,19 +26,27 @@ public class ListInterface {
 
     /* 순회법 1 */
     for(int i=0; i<arrayList.size(); i++) {
-      System.out.println(arrayList.get(i));
+      System.out.println("1 >>>>>  " + arrayList.get(i));
     }
 
-    /* 순회 법 2 */
+    /* 순회 법 2 - 원본 배열의 요소를 삭제하려고 할 때 추천 */
     Iterator<String> iterator = arrayList.iterator();
-
+//    while (iterator.hasNext()) {
+//      System.out.println(iterator.next());
+//    }
     while (iterator.hasNext()) {
-      System.out.println(iterator.next());
+      if(iterator.next().contains("a")) {
+        iterator.remove();
+      }
     }
+
+//    while (iterator.hasNext()) {
+//      System.out.println(iterator.next());
+//    }
 
     /* 순회법 3 */
     for(String item : arrayList) {
-      System.out.println(item);
+      System.out.println("2  >>>>>  " + item);
     }
 
     //    arrayList.forEach(System.out::println);
