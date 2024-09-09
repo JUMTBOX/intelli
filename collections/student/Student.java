@@ -31,7 +31,7 @@ public class Student implements Comparable<Student> {
     return String.format("Student [id=%s, name=%s]", id, name);
   }
   @Override
-  public int compareTo(Student other) {
-    return this.id - other.id;
+  public int compareTo(Student that) {
+    return Integer.compare(this.id ,that.id);
   }
 }
