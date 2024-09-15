@@ -1,4 +1,6 @@
-package collections;
+package collections.practiceSet;
+
+import collections.practiceSet.AreAnagram;
 
 public class AnagramRunner {
 

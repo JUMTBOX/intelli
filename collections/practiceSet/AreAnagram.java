@@ -1,4 +1,4 @@
-package collections;
+package collections.practiceSet;
 
 import java.util.Arrays;
 
