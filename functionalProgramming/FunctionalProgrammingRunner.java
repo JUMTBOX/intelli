@@ -24,10 +24,12 @@ public class FunctionalProgrammingRunner {
   }
 
   private static void printWithCondition (List<String> list) {
-    list.stream().forEach(item ->{
-      if(item.endsWith("at")) {
-        System.out.println(item);
-      }
-    });
+//    list.stream().forEach(item ->{
+//      if(item.endsWith("at")) {
+//        System.out.println(item);
+//      }
+//    });
+
+    list.stream().filter(item -> item.endsWith("at")).forEach(item -> System.out.println(item));
   }
 }
