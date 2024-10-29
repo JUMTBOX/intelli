@@ -3,13 +3,29 @@ package multithreading;
 // extends Thread
 // implements Runnable
 
+class Task extends Thread {
+  private int taskNum;
+  Task (int taskNum) {
+    this.taskNum = taskNum;
+  }
+
+  public void run() {
+      for(int i=taskNum*100; i <= taskNum*100 + 99; i++) {
+        System.out.print(i + " ");
+      }
+
+      System.out.println("\n Task"+ taskNum +"Done");
+
+  }
+}
+
 class Task1 extends Thread {
   public void run() { // SIGNATURE
     for(int i=101; i <= 199; i++) {
-      System.out.println(i + " ");
+      System.out.print(i + " ");
     }
 
-    Thread.yield();
+//    Thread.yield();
 
     System.out.println("\n Task1 Done");
   }
