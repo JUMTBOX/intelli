@@ -26,7 +26,9 @@ public class CallableRunner {
 
     System.out.println("\n new CallableTask Executed");
 
-    System.out.println("RETURN >>>> " + promise.get());
+    String greeting = promise.get();
+
+    System.out.println(greeting);
 
     System.out.println("\n Main Completed");
 
